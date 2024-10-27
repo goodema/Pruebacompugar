@@ -175,11 +175,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="LOGO">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\alane\OneDrive\Escritorio\COMPUGAR.png"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

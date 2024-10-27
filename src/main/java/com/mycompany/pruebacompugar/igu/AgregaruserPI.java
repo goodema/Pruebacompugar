@@ -1,10 +1,14 @@
 package com.mycompany.pruebacompugar.igu;
+import BD.ConexionBD;
 
 public class AgregaruserPI extends javax.swing.JFrame {
 
+    ConexionBD c;
     public AgregaruserPI() {
         initComponents();
+        c=new ConexionBD();
     }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
