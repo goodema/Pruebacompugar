@@ -7,6 +7,8 @@ public class AgregaruserPI extends javax.swing.JFrame {
     public AgregaruserPI() {
         initComponents();
         c=new ConexionBD();
+        c.setConnectionValues("localhost:3306/pruebacompugar", "root", "", "error de conexión");
+        c.getConection();
     }
     
 

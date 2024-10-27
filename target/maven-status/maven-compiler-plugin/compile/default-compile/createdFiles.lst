@@ -1,11 +1,14 @@
 com\mycompany\pruebacompugar\Pruebacompugar.class
-com\mycompany\pruebacompugar\igu\AgregaruserPI$1.class
 com\mycompany\pruebacompugar\igu\AgregaruserPI$3.class
 com\mycompany\pruebacompugar\igu\Pagodeinternet$2.class
-com\mycompany\pruebacompugar\igu\principal.class
 com\mycompany\pruebacompugar\igu\Pagodeinternet.class
-com\mycompany\pruebacompugar\igu\AgregaruserPI.class
+BD\ConexionBD.class
 com\mycompany\pruebacompugar\igu\principal$1.class
+com\mycompany\pruebacompugar\logica\controladora.class
 com\mycompany\pruebacompugar\igu\Pagodeinternet$1.class
+com\mycompany\pruebacompugar\igu\AgregaruserPI$1.class
+com\mycompany\pruebacompugar\persistencia\ControladoraPersistencia.class
+com\mycompany\pruebacompugar\igu\principal.class
+com\mycompany\pruebacompugar\igu\AgregaruserPI.class
 com\mycompany\pruebacompugar\igu\AgregaruserPI$2.class
 com\mycompany\pruebacompugar\igu\Pagodeinternet$3.class
