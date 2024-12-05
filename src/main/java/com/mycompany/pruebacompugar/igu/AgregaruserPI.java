@@ -10,6 +10,17 @@ public class AgregaruserPI extends javax.swing.JFrame {
         c.setConnectionValues("localhost:3306/pruebacompugar", "root", "", "error de conexión");
         c.getConection();
     }
+    public String [] getData()
+    {
+        String [] data = new String [5] ;
+        data[0]=Direccion.getText();
+        data[1]=nombre.getText();
+        data[2]=telefono.getText();
+        data[3]=ip.getText();
+        data[4]=antena.getSelectedItem()+"";
+        return data;
+    }
+  
     
 
     @SuppressWarnings("unchecked")
@@ -22,14 +33,17 @@ public class AgregaruserPI extends javax.swing.JFrame {
         Dirección = new javax.swing.JLabel();
         IP = new javax.swing.JLabel();
         btnguardarPI = new javax.swing.JButton();
-        TexnombrePI = new javax.swing.JTextField();
-        TexttelfPI = new javax.swing.JTextField();
-        TextdirecPI = new javax.swing.JTextField();
-        TextipPI = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
+        Direccion = new javax.swing.JTextField();
+        telefono = new javax.swing.JTextField();
+        ip = new javax.swing.JTextField();
         btnlimpiarPI = new javax.swing.JButton();
         LOGO = new javax.swing.JLabel();
+        IP1 = new javax.swing.JLabel();
+        antena = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Registro");
 
         Nombre.setText("Nombre");
 
@@ -53,41 +67,37 @@ public class AgregaruserPI extends javax.swing.JFrame {
             }
         });
 
-        LOGO.setIcon(new javax.swing.ImageIcon("C:\\Users\\alane\\OneDrive\\Escritorio\\COMPUGAR.png")); // NOI18N
+        IP1.setText("Antena");
+
+        antena.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
+                .addGap(82, 82, 82)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnlimpiarPI)
+                    .addComponent(IP)
+                    .addComponent(Teléfono)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
+                        .addGap(2, 2, 2)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(IP)
-                            .addComponent(Teléfono)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Dirección)
-                                    .addComponent(Nombre))))))
+                            .addComponent(Dirección)
+                            .addComponent(Nombre)))
+                    .addComponent(IP1)
+                    .addComponent(btnlimpiarPI))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnguardarPI))
-                            .addComponent(TexttelfPI)
-                            .addComponent(TexnombrePI, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(67, 67, 67))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextdirecPI, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextipPI, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(67, Short.MAX_VALUE))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnguardarPI)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(telefono, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(ip, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(antena, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(nombre)
+                    .addComponent(Direccion))
+                .addContainerGap(63, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(126, 126, 126)
                 .addComponent(LOGO)
@@ -98,27 +108,35 @@ public class AgregaruserPI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(LOGO)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TexttelfPI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Dirección))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TexnombrePI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Nombre))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextdirecPI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Teléfono))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextipPI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(IP))
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnguardarPI)
-                    .addComponent(btnlimpiarPI))
-                .addGap(49, 49, 49))
+                    .addComponent(antena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IP1))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(btnlimpiarPI)
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnguardarPI)
+                        .addGap(17, 17, 17))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,13 +161,20 @@ public class AgregaruserPI extends javax.swing.JFrame {
 
     private void btnguardarPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarPIActionPerformed
         // TODO add your handling code here:
+        String [] r= getData();
+       
+        if (c.insertarDatos(r)){
+            System.out.println("Datos guardados correctamente");
+        }else{
+            System.out.println("Error al guardar datos");
+        }
     }//GEN-LAST:event_btnguardarPIActionPerformed
 
     private void btnlimpiarPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarPIActionPerformed
-        TexnombrePI.setText("");
-        TextdirecPI.setText("");
-        TextipPI.setText("");
-        TexttelfPI.setText("");
+        nombre.setText("");
+        telefono.setText("");
+        ip.setText("");
+        Direccion.setText("");
     }//GEN-LAST:event_btnlimpiarPIActionPerformed
 
     public static void main(String args[]) {
@@ -160,19 +185,23 @@ public class AgregaruserPI extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Direccion;
     private javax.swing.JLabel Dirección;
     private javax.swing.JLabel IP;
+    private javax.swing.JLabel IP1;
     private javax.swing.JLabel LOGO;
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Teléfono;
-    private javax.swing.JTextField TexnombrePI;
-    private javax.swing.JTextField TextdirecPI;
-    private javax.swing.JTextField TextipPI;
-    private javax.swing.JTextField TexttelfPI;
+    private javax.swing.JComboBox<String> antena;
     private javax.swing.JButton btnguardarPI;
     private javax.swing.JButton btnlimpiarPI;
+    private javax.swing.JTextField ip;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField telefono;
     // End of variables declaration//GEN-END:variables
 }
